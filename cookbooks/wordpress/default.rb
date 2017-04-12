@@ -10,17 +10,16 @@ http_request 'Download wordpress' do
   mode '755'
 end
 
-# 動かないケースが多い。謎
 execute 'deploy wordpress' do
-  command "tar -xzf /var/www/html/wordpress-4.7.3-ja.tar.gz"
-  not_if "test -d /var/www/html/wordpress"
+  command 'tar -xzf wordpress-4.7.3-ja.tar.gz'
+  cwd '/var/www/html/'
 end
 
 directory '/var/www/html/wordpress' do
-  mode '777'
+  mode '755'
 end
 
 execute 'chown' do
-  command 'chown -R nginx:nginx /var/www/html/wordpress'
+  command "chown -R nginx:nginx /var/www/html/wordpress"
   notifies :restart, "service[nginx]"
 end
