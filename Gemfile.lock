@@ -10,6 +10,8 @@ GEM
       schash (~> 0.1.0)
       specinfra (>= 2.64.0, < 3.0.0)
       thor
+    itamae-plugin-recipe-selinux (0.0.5)
+      itamae
     multi_json (1.12.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -51,6 +53,7 @@ PLATFORMS
 
 DEPENDENCIES
   itamae
+  itamae-plugin-recipe-selinux
   rake
   serverspec
 
