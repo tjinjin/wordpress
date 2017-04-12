@@ -15,4 +15,7 @@ end
 remote_file '/etc/nginx/conf.d/wordpress.conf' do
   source 'files/wordpress.conf'
   notifies :reload, "service[nginx]"
+  owner 'nginx'
+  group 'nginx'
+  mode '644'
 end
