@@ -13,8 +13,4 @@ mysql> grant all privileges on wordpress.* to wordpress@localhost identified by 
 ```
 
 ## ブラウザで設定
-- http://192.168.33.10/wp-admin/setup-config.phpにアクセス
-
-
-## 対障害性を高めるには？
-
+- http://<ipaddress>/wp-admin/setup-config.phpにアクセス
